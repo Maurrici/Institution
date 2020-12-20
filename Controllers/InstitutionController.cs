@@ -35,5 +35,62 @@ namespace Instituicoes.Controllers
         {
             return View(institutions);
         }
+
+        // GET: Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //POST: Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Institution institution)
+        {
+            institution.InstitutionID = institutions.Select(i => i.InstitutionID).Max() + 1;
+            institutions.Add(institution);
+
+            return RedirectToAction("Index");
+        }
+
+        //GET: Update
+        public IActionResult Edit(long id)
+        {
+            return View(institutions.Where(i => i.InstitutionID == id).First());
+        }
+
+        //POST: Update
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Institution institution)
+        {
+            institutions.Where(i => i.InstitutionID == institution.InstitutionID).First();
+            institutions.Add(institution);
+
+            return RedirectToAction("Index");
+        }
+
+        //GET: Read
+        public IActionResult Details(long id)
+        {
+            return View(institutions.Where(i => i.InstitutionID == id).First());
+        }
+
+        //GET: Delete
+        public ActionResult Delete(long id)
+        {
+            return View(institutions.Where(i => i.InstitutionID == id).First());
+        }
+
+        //POST: Delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Institution institution)
+        {
+            institutions.Remove(institutions.Where(i => i.InstitutionID == institution.InstitutionID).First());
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

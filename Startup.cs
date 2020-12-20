@@ -7,7 +7,8 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Instituicoes.Models.Data;
 
 namespace Instituicoes
 {
@@ -24,10 +25,12 @@ namespace Instituicoes
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<EFContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, EFContext context)
         {
             if (env.IsDevelopment())
             {
@@ -50,8 +53,10 @@ namespace Instituicoes
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Institution}/{action=Index}/{id?}");
             });
+
+            CreateDatabase.Initialize(context);
         }
     }
 }
