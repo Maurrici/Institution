@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\Instituicoes.csproj": {}
+    "C:\\Users\\mauri\\source\\repos\\Institution\\Instituicoes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\Instituicoes.csproj": {
+    "C:\\Users\\mauri\\source\\repos\\Institution\\Instituicoes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\Instituicoes.csproj",
+        "projectUniqueName": "C:\\Users\\mauri\\source\\repos\\Institution\\Instituicoes.csproj",
         "projectName": "Instituicoes",
-        "projectPath": "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\Instituicoes.csproj",
-        "packagesPath": "C:\\Users\\mauriciosantos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\obj\\",
+        "projectPath": "C:\\Users\\mauri\\source\\repos\\Institution\\Instituicoes.csproj",
+        "packagesPath": "C:\\Users\\mauri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mauri\\source\\repos\\Institution\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mauriciosantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "Microsoft.Web.LibraryManager.Build": {
+              "target": "Package",
+              "version": "[2.1.113, )"
             }
           },
           "imports": [
@@ -77,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

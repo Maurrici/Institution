@@ -26,7 +26,7 @@ namespace Instituicoes
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<EFContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<EFContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DeveloperConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +53,7 @@ namespace Instituicoes
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Institution}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             CreateDatabase.Initialize(context);

@@ -88,7 +88,7 @@ namespace Instituicoes.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!_context.Departments.Any(department => department.DepartmentID == id))
+                    if (!_context.Departments.Any(d => d.DepartmentID == id))
                     {
                         return NotFound();
                     }
@@ -126,7 +126,7 @@ namespace Instituicoes.Controllers
             {
                 return NotFound();
             }
-            var department = await _context.Departments.SingleOrDefaultAsync(m => m.DepartmentID == id);
+            var department = await _context.Departments.SingleOrDefaultAsync(d => d.DepartmentID == id);
             if (department == null)
             {
                 return NotFound();
@@ -139,7 +139,7 @@ namespace Instituicoes.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long? id)
         {
-            var departamento = await _context.Departments.SingleOrDefaultAsync(m => m.DepartmentID == id);
+            var departamento = await _context.Departments.SingleOrDefaultAsync(d => d.DepartmentID == id);
             _context.Departments.Remove(departamento);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
