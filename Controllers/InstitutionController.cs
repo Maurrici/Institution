@@ -72,7 +72,7 @@ namespace Instituicoes.Controllers
         //POST: Update
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long? id, [Bind("InstitutionID, Nome")] Institution institution)
+        public async Task<IActionResult> Edit(long? id, [Bind("InstitutionID, Nome, Endereco")] Institution institution)
         {
             if (id != institution.InstitutionID)
             {
@@ -142,6 +142,7 @@ namespace Instituicoes.Controllers
             var institution = await _context.Institutions.SingleOrDefaultAsync(i => i.InstitutionID == id);
             _context.Institutions.Remove(institution);
             await _context.SaveChangesAsync();
+            TempData["Message"] = $"Instituição {institution.Nome.ToUpper()} foi removida com sucesso!";
             return RedirectToAction(nameof(Index));
         }
 

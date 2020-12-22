@@ -8771,19 +8771,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mauri\\.nuget\\packages\\": {}
+    "C:\\Users\\mauriciosantos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mauri\\source\\repos\\Institution\\Instituicoes.csproj",
+      "projectUniqueName": "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\Instituicoes.csproj",
       "projectName": "Instituicoes",
-      "projectPath": "C:\\Users\\mauri\\source\\repos\\Institution\\Instituicoes.csproj",
-      "packagesPath": "C:\\Users\\mauri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mauri\\source\\repos\\Institution\\obj\\",
+      "projectPath": "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\Instituicoes.csproj",
+      "packagesPath": "C:\\Users\\mauriciosantos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mauriciosantos\\source\\Projetos\\Instituicoes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mauriciosantos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8850,7 +8850,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
